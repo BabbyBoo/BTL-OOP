@@ -128,7 +128,7 @@ public class ComputerVehicle {
                 continue;
 
             ComputerVehicle cV = comVehicles.get(i);
-            if (y < cV.getY() + cV.getHeight() + 100 && y > cV.getY() && type == 0) {
+            if (y < cV.getY() + cV.getHeight() + 120 && y > cV.getY() && type == 0) {
                 if (x - 5 < cV.getX() && x + width + 5 > cV.getX()) {
                     moveLeft = true;
                     yV = Math.max(yV, cV.getYVelocity());

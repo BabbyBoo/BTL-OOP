@@ -362,15 +362,15 @@ public class RunGame extends JPanel {
     public void movePlayerVehicle() {
         if (upPressed) {
             if (SpCoe < 2)
-                SpCoe += 0.05;
+                SpCoe += 0.0625;
         } else if (downPressed) {
             if (SpCoe > 0.6)
-                SpCoe -= 0.1;
+                SpCoe -= 0.125;
         } else if (!upPressed && !downPressed && SpCoe != 1) {
             if (SpCoe < 1)
-                SpCoe += 0.05;
+                SpCoe += 0.0625;
             else
-                SpCoe -= 0.05;
+                SpCoe -= 0.0625;
         }
         if (leftPressed) {
             playerVehicle.moveLeft();
@@ -422,7 +422,7 @@ public class RunGame extends JPanel {
         g.setColor(Color.WHITE); // White for better visibility on a black background
         g.setFont(new Font("Arial", Font.BOLD, 20));
         g.drawString("Player Score: " + (int) playerScore, 50, 30);
-        g.drawString("Speed Coefficient: " + (int)(SpCoe*40) + "km/h", 50, 50);
+        g.drawString("Speed Coefficient: " + (int)(SpCoe*Coe*10) + "km/h", 50, 50);
 
         // Draw pause button icon
         ImageIcon pauseIcon = new ImageIcon("button/button_pause.png");
